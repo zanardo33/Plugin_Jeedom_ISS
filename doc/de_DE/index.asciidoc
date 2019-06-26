@@ -1,0 +1,21 @@
+= Imperihome
+
+'''
+== Beschreibung
+include::description.asciidoc[]
+
+'''
+== Konfiguration
+include::configuration.asciidoc[]
+
+'''
+== Automatische Erkennung
+include::ISS.asciidoc[]
+
+'''
+== Imperihome Kontrolle
+include::imperihome.asciidoc[]
+
+'''
+== FAQ
+include::faq.asciidoc[]

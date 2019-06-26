@@ -1,0 +1,234 @@
+=== Explication
+
+Le système de détection automatique se base sur un certains nombre de critère afin de déterminer le type le plus adapté à Imperihome.
+
+Ci-dessous, vous trouverez les différents critères pour pouvoir avoir une détection optimale.
+
+=== Définition des critères
+
+==== Aktoren
+[panel,primary]
+.Interrupteur [DevSwitch]
+--
+.Bedingungen:
+* La commande est de type Binaire et il y a des commandes de type Action dans l'équipement
+
+.ou
+* Il s'agit d'une commande de type Action
+--
+
+[panel,primary]
+.Variateur de lumière [DevDimmer]
+--
+.Bedingungen:
+* Le widget de la commande est "Light"
+
+.ou
+* La commande est de type Numeric et a comme unité "%" ainsi que des commandes de type Action dans l'équipement
+--
+
+[panel,primary]
+.Serrure [DevLock]
+--
+Pas de détection automatique sur ce type. Utiliser le mode avancé.
+--
+
+[panel,primary]
+.Lampe RGB [DevRGBLight]
+--
+.Bedingungen:
+* Il existe au moins une commande de type Couleur dans l'équipement
+--
+
+[panel,primary]
+.Volet [DevShutter]
+--
+.Bedingungen:
+* La commande est liée au plugin Store
+
+.ou
+
+* Le widget de la commande est "Store"
+--
+
+
+==== Détecteurs et Capteurs
+[panel,primary]
+.Capteur de CO2 [DevCO2]
+--
+.Bedingungen:
+* Le type de la commande est "Binaire" et le nom de la commande contient "Fumée" ou "Smoke"
+
+.ou
+* La commande est de type Numeric et a comme unité "ppm"
+--
+
+[panel,primary]
+.Détecteur de CO2 [DevCO2Alert]
+--
+.Bedingungen:
+* Le type de la commande est "Binaire"
+
+.und
+* Le nom de la commande est "Co"
+--
+
+[panel,primary]
+.Détecteur d'ouverture [DevDoor]
+--
+.Bedingungen:
+* Le widget de la commande est "Door", "Baie", "Window" ou "Porte_garage"
+
+.ou
+* Le nom de la commande contient "Etat" et le nom de l'équipement est "Fenetre" ou "Porte"
+--
+
+[panel,primary]
+.Compteur d'énergie [DevElectricity]
+--
+.Bedingungen:
+* La commande est de type Numeric et a comme unité "w" ou "kwh"
+--
+
+[panel,primary]
+.Compteur d'eau [DevFlood]
+--
+.Bedingungen:
+* La commande est de type Numeric et a comme unité "m3"
+--
+
+[panel,primary]
+.Capteur d'humidité [DevHygrometry]
+--
+.Bedingungen:
+* Le nom de la commande contient "Humidité"
+--
+
+[panel,primary]
+.Capteur de luminosité [DevLuminosity]
+--
+.Bedingungen:
+* La commande est de type Numeric et a comme unité "lux"
+--
+
+[panel,primary]
+.Détecteur de mouvement [DevMotion]
+--
+.Bedingungen:
+* Le widget de la commande est "Presence"
+
+.ou
+* La commande est liée au plugin Alarme
+--
+
+[panel,primary]
+.Capteur de bruit [DevNoise]
+--
+.Bedingungen:
+* La commande est de type Numeric et a comme unité "dB"
+--
+
+[panel,primary]
+.Capteur de pression [DevPressure]
+--
+.Bedingungen:
+* La commande est de type Numeric et a comme unité ""
+--
+
+[panel,primary]
+.Capteur de pluie [DevRain]
+--
+.Bedingungen:
+* La commande est de type Numeric et a comme unité "mm/h" ou "mm"
+--
+
+[panel,primary]
+.Détecteur de fumée [DevSmoke]
+--
+.Bedingungen:
+* Le widget de la commande est "Fire"
+--
+
+[panel,primary]
+.Capteur de température [DevTemperature]
+--
+.Bedingungen:
+* La commande est de type Numeric et a comme unité "°C"
+--
+
+[panel,primary]
+.Capteur de température et humidité [DevTempHygro]
+--
+.Bedingungen:
+* Le nom de la commande contient "Humidité"
+
+.und
+* Une commande du même équipement a comme unité "°C", et est indiquée comme "A Transmettre"
+
+
+
+.OU
+* La commande a comme unité "°C"
+
+.und
+* Une commande du même équipement a comme nom "Humidité", et est indiquée comme "A Transmettre"
+--
+
+[panel,primary]
+.Capteur d'UV [DevUV]
+--
+.Bedingungen:
+* Le nom de la commande contient "UV"
+--
+
+[panel,primary]
+.Capteur de vent [DevWind]
+--
+.Bedingungen:
+* La commande est de type Numeric et a comme unité "km/h"
+--
+
+==== Szenarien
+[panel,primary]
+.Scénario [DevScene]
+--
+.Bedingungen:
+* Il s'agit d'un scénario
+--
+
+==== Andere
+[panel,primary]
+.Equipement générique [DevGenericSensor]
+--
+.Bedingungen:
+* La commande est de type Numeric, a comme unité "%" et il n'y a pas de commandes de type Action dans l'équipement
+
+.ou
+* La commande est de type Binaire et il n'y a pas de commandes de type Action dans l'équipement
+
+.ou
+* Il n'a pas été possible de déterminer un autre type: type retourné par défaut
+--
+
+[panel,primary]
+.Caméra [DevCamera]
+--
+.Bedingungen:
+* La commande est liée au plugin Caméra
+--
+
+[panel,primary]
+.Selecteur de choix [DevMultiSwitch]
+--
+.Bedingungen:
+* La commande est liée au plugin Présence
+
+.ou
+* La commande est liée au plugin Alarme (sélection du mode)
+--
+
+[panel,primary]
+.Thermostat [DevThermostat]
+--
+* La commande est liée au plugin Thermostat
+--
