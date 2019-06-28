@@ -1,7 +1,7 @@
 {
 	"id" : "VZA_ID_imperihome",
 	"name" : "VZA_NAME_ImperiHome",
-	"description" : "VZA_Permet d'utiliser Jeedom avec les applis mobiles Imperihome. Compatible avec les versions Android et IOS, nécessite l'installation d'Imperihome via le Google Play Store ou l'AppStore, en version gratuite ou payante.",
+	"description" : "VVZA_Permet d'utiliser Jeedom avec les applis mobiles Imperihome. Compatible avec les versions Android et IOS, nécessite l'installation d'Imperihome via le Google Play Store ou l'AppStore, en version gratuite ou payante.",
 	"licence" : "AGPL",
 	"author" : "VZA_lunarok",
 	"require" : "2.4",
